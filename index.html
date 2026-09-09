@@ -510,6 +510,13 @@
 
   <div class="footer-mark">PRIMA FITNESS CLUB &middot; MEDAN</div>
 </div>
-
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var toParam = params.get('to');
+  if (toParam && toParam.trim().length > 0) {
+    document.getElementById('toName').textContent = toParam.trim();
+    document.title = 'Undangan Soft Opening — ' + toParam.trim();
+  }
+    </script>
 </body>
 </html>
